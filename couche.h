@@ -14,6 +14,9 @@
 
 class Couche
 {
+	public:
+		
+
 	// Classe à compléter
 };
 
