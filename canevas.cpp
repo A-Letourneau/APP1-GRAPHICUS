@@ -12,20 +12,34 @@
 
 Canevas::Canevas()
 {
+	for (int i = 0; i < MAX_COUCHES; i++)
+	{
+		couches[i].indexCouche = i;
+		couches[i].etat = 0;
+	}
 }
 
 Canevas::~Canevas()
 {
+
 }
 
 bool Canevas::reinitialiser()
 {
-	return true;
+
 }
 
 bool Canevas::reinitialiserCouche(int index)
 {
-	return true;
+	if (0 < index && index < nbCouches)
+		if (couches[i].etat != 0)
+		{
+			couches[i].vecteurDeForme.vider();
+			
+		}
+
+	return false;
+
 }
 
 bool Canevas::activerCouche(int index)
@@ -40,6 +54,7 @@ bool Canevas::desactiverCouche(int index)
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
+	
 	return true;
 }
 

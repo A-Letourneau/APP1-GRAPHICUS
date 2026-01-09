@@ -10,4 +10,31 @@
 
 #include "couche.h"
 
+Couche::Couche()
+{
+
+}
+
+
+Couche::~Couche()
+{
+
+}
+
+bool Couche::ajouterForme(int formeNb)
+{
+
+    if (formeNb == 1)
+    {
+        
+    }
+
+    return 0;
+}
+
+void reinitialiser()
+{
+    vecteurDeForme.vider();
+}
+
 // Implémentation à faire...

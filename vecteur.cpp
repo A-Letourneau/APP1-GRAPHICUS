@@ -14,10 +14,11 @@ vecteur::~vecteur()
     delete[] m_donnees;
 }
 
-// Double la capacité du vecteur
+// Double la capacitÃ© du vecteur
 void vecteur::doublerCapacite()
 {
-    Forme** nouveauTableau = new Forme * [m_capacite * 2];
+    m_capacite = m_capacite * 2;
+    Forme** nouveauTableau = new Forme * [m_capacite];
 
     for (int i = 0; i < m_taille; ++i)
     {
@@ -28,7 +29,7 @@ void vecteur::doublerCapacite()
     m_donnees = nouveauTableau;
 }
 
-// Retourne la capacité
+// Retourne la capacitÃ©
 int vecteur::capacite() const
 {
     return m_capacite;
@@ -52,7 +53,7 @@ void vecteur::ajouter(Forme* forme)
     m_taille = m_taille + 1;
 }
 
-// Retourne un élément à un index donné
+// Retourne un Ã©lÃ©ment Ã  un index donnÃ©
 Forme* vecteur::obtenir(int index) const
 {
     if (index < 0 || index >= m_taille)

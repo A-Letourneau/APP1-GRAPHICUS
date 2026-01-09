@@ -2,30 +2,39 @@
  * Fichier: forme.cpp
  * Auteurs: C.-A. Brunet
  * Date: 28 novembre 2025
- * Description: Implémentation des méthodes des classes décrites dans
- *    forme.h. Les méthodes de la classe Forme ne doivent pas être
- *    modifiées.
+ * Description: ImplÃ©mentation des mÃ©thodes des classes dÃ©crites dans
+ *    forme.h. Les mÃ©thodes de la classe Forme ne doivent pas Ãªtre
+ *    modifiÃ©es.
  *
  * Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
 #include "Cercle.h"
 
-Cercle::Cercle(int r, int x, int y)
+Cercle::Cercle(int x, int y, int r)
 {
 	rayon = r;
 	ancrage.x = x;
 	ancrage.y = y;
-	Aire();
+	aire();
 }
 Cercle::~Cercle()
 {
 
 }
 
-Cercle::Aire()
+double Cercle::aire()
 {
-	aire = rayon * rayon * 3.14159;
+	aireCercle = rayon * rayon * 3.14159;
+	return aireCercle;
 }
 
+void Cercle::afficher(ostream& s)
+{
+	s << "Cercle(x=" << ancrage.x << ",y="<< ancrage.y << ",r=" << rayon << ")" << endl;
+}
 
+int Cercle::returnRayon()
+{
+	rayon = nouvelle;
+}
