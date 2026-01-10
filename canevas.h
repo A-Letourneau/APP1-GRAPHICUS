@@ -15,6 +15,8 @@
 #include "forme.h"
 #include "couche.h"
 
+
+
 const int MAX_COUCHES = 5;
 
 using namespace std;
@@ -36,7 +38,6 @@ public:
 
 private:
 	Couche couches[MAX_COUCHES];
-	int nbCouches = MAX_COUCHES;
 };
 
 #endif

@@ -53,6 +53,25 @@ void vecteur::ajouter(Forme* forme)
     m_taille = m_taille + 1;
 }
 
+Forme* vecteur::enlever(int index)
+{
+    
+    if(0 < index && index < m_taille && m_donnees[index] != nullptr)
+    {
+        Forme* sauvegardeForme = m_donnees[index];
+        m_donnees[index] = nullptr;
+        for (int i = index; i < m_taille - index; i++)
+        {
+            m_donnees[index] = m_donnees[index + 1]
+        }
+        m_taille = m_taille - 1;
+        return sauvegardeForme;
+    }
+
+    return nullptr;
+
+}
+
 // Retourne un élément à un index donné
 Forme* vecteur::obtenir(int index) const
 {

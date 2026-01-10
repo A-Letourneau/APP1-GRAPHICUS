@@ -17,14 +17,22 @@
 
 #include "vecteur.h"
 
+#define INITIALISE 0
+#define INACTIF 1
+#define ACTIF 2
+#define NB_ETAT 3
+
 class Couche
 {
 	public:
 		Couche();
 		~Couche();
-		bool ajouterForme(int formeNb);
+		bool ajouterForme(Forme *p_forme);
 		void reinitialiser();
+		void changeEtat(int nouvelleEtat);
+		int retourneEtat();
 		vecteur vecteurDeForme;
+
 		int indexCouche;
 		int etat;
 		double aireTotale;

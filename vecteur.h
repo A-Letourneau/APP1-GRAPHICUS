@@ -3,6 +3,7 @@
 
 #include "forme.h"
 
+#define VIDE 0
 
 class vecteur
 {
@@ -24,6 +25,7 @@ class vecteur
         int taille() const;
 
         // Gestion des éléments
+        Forme* enlever(int index);
         void ajouter(Forme* f);
         Forme* obtenir(int index) const;
 

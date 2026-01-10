@@ -21,18 +21,25 @@ Couche::~Couche()
 
 }
 
-bool Couche::ajouterForme(int formeNb)
+bool Couche::ajouterForme(Forme *p_forme)
 {
-
-    if (formeNb == 1)
-    {
-        
-    }
-
-    return 0;
+    vecteurDeForme.ajouter(p_forme)
+    aireTotale += p_forme->aire();
+    return true;
 }
 
-void reinitialiser()
+void Couche::changeEtat(int nouvelleEtat);
+{
+    if (0 < etat && etat < NB_ETAT)
+        etat = nouvelleEtat;
+}
+
+int Couche::retourneEtat();
+{
+    return etat;
+}
+
+void Couche::reinitialiser()
 {
     vecteurDeForme.vider();
 }
