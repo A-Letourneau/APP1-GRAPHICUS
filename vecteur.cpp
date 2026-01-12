@@ -62,7 +62,7 @@ Forme* vecteur::enlever(int index)
         m_donnees[index] = nullptr;
         for (int i = index; i < m_taille - index; i++)
         {
-            m_donnees[index] = m_donnees[index + 1]
+            m_donnees[index] = m_donnees[index + 1];
         }
         m_taille = m_taille - 1;
         return sauvegardeForme;

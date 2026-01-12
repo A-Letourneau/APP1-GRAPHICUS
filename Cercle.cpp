@@ -34,7 +34,4 @@ void Cercle::afficher(ostream& s)
 	s << "Cercle(x=" << ancrage.x << ",y="<< ancrage.y << ",r=" << rayon << ")" << endl;
 }
 
-int Cercle::returnRayon()
-{
-	rayon = nouvelle;
-}
+

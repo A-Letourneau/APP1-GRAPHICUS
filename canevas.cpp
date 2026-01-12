@@ -31,7 +31,7 @@ bool Canevas::reinitialiser()
 	for (int i = 0; i < MAX_COUCHES; i++)
 		if (couches[i].retourneEtat() != INITIALISE)
 		{
-			couches[i].vecteurDeForme.vider();
+			couches[i].reinitialiser();
 			couches[i].changeEtat(INITIALISE);
 			atleastOneDeletedFlag = true;
 		}
@@ -42,9 +42,9 @@ bool Canevas::reinitialiser()
 bool Canevas::reinitialiserCouche(int index)
 {
 
-	if (couches[index].retourneEtat() != INITIALISE && 0 < index && index < nbCouches)
+	if (couches[index].retourneEtat() != INITIALISE && 0 <= index && index < MAX_COUCHES)
 	{
-		couches[index].vecteurDeForme.vider();
+		couches[index].reinitialiser();
 		couches[index].changeEtat(INITIALISE);
 		return true;
 	}
@@ -60,7 +60,7 @@ bool Canevas::activerCouche(int index)
 			couches[i].changeEtat(INACTIF);
 		
 
-	if (0 < index && index < nbCouches)
+	if (0 <= index && index < MAX_COUCHES)
 	{
 		couches[index].changeEtat(ACTIF);
 		return true;
@@ -71,7 +71,7 @@ bool Canevas::activerCouche(int index)
 
 bool Canevas::desactiverCouche(int index)
 {
-	if (couches[index].retourneEtat() == ACTIF && 0 < index && index < nbCouches)
+	if (couches[index].retourneEtat() == ACTIF && 0 <= index && index < MAX_COUCHES)
 	{
 		couches[index].changeEtat(INACTIF);
 		return true;
@@ -79,34 +79,58 @@ bool Canevas::desactiverCouche(int index)
 	return true;
 }
 
-bool Canevas::ajouterForme(Forme *p_forme)
+bool Canevas::ajouterFormeCouche(Forme *p_forme)
 {
 	for (int i = 0; i < MAX_COUCHES; i++)
 		if (couches[i].retourneEtat() == ACTIF)
-			//Couche.h s'occupe de ca
-	return true;
+		{
+			couches[i].ajouterForme(p_forme);
+			return true;
+		}	
+
+	return false;
 }
 
 bool Canevas::retirerForme(int index)
 {
 	for (int i = 0; i < MAX_COUCHES; i++)
 		if (couches[i].retourneEtat() == ACTIF)
-			//Couche.h s'occupe de ca
-	return true;
+		{
+			return couches[i].enleverForme(index);
+		}	
+	return false;
 }
 
 double Canevas::aire()
 {
-	//Couche.h s'occupe de ca
-	return 0.0;
+	double aireCaneva = 0;
+
+	for (int i = 0; i < MAX_COUCHES; i++)
+	{
+		aireCaneva += couches[i].aireTotale;
+	}
+	
+	return aireCaneva;
 }
 
 bool Canevas::translater(int deltaX, int deltaY)
 {	
-	//Couche.h s'occupe de ca
-	return true;
+	for (int i = 0; i < MAX_COUCHES; i++)
+		if (couches[i].retourneEtat() == ACTIF)
+		{
+			couches[i].translater(deltaX,deltaY);
+			return true;
+		}
+	return false;
 }
 
 void Canevas::afficher(ostream & s)
 {
+	for (int i = 0; i < MAX_COUCHES; i++)
+	{
+		s << "---- Couche " << i << " ----" << endl;
+		couches[i].afficher(s);
+	}
+	
+	
 }

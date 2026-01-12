@@ -28,14 +28,21 @@ class Couche
 		Couche();
 		~Couche();
 		bool ajouterForme(Forme *p_forme);
-		void reinitialiser();
+		bool enleverForme(int index);
+		
 		void changeEtat(int nouvelleEtat);
-		int retourneEtat();
+		int  retourneEtat();
+		void afficher(ostream & s);
+
+		bool translater(int x, int y);
+
+		void reinitialiser();
+
 		vecteur vecteurDeForme;
 
 		int indexCouche;
-		int etat;
-		double aireTotale;
+		int etat = INITIALISE;
+		double aireTotale = 0;
 
 	// Classe à compléter
 };

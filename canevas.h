@@ -30,7 +30,7 @@ public:
 	bool reinitialiserCouche(int index);
 	bool activerCouche(int index);
 	bool desactiverCouche(int index);
-	bool ajouterForme(Forme *p_forme);
+	bool ajouterFormeCouche(Forme *p_forme);
 	bool retirerForme(int index);
 	double aire();
 	bool translater(int deltaX, int deltaY);
@@ -38,6 +38,7 @@ public:
 
 private:
 	Couche couches[MAX_COUCHES];
+	
 };
 
 #endif

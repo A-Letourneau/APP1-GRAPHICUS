@@ -19,7 +19,7 @@ public:
 	int rayon = 0;
 	float aireCercle = 0;
 	virtual double aire();
-	virtual void afficher(ostream & s);
+	void afficher(ostream & s);
 };
 
 #endif
