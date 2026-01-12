@@ -17,12 +17,25 @@ public:
 	Rectangle(int l, int h, int x, int y);
 	virtual ~Rectangle();
 	
-    int longeur = 0;
+    int longueur = 0;
     int largeur = 0;
 
 	float aire = 0;
 	virtual double aire();
 	virtual void afficher(ostream & s);
+
+
+	virtual void modifierLongueur(int l);
+	virtual void modifierLargeur(int h);
+	virtual void modifierX(int x);
+	virtual void modifierY(int y);
+	
+	virtual int lireLongueur() const;
+	virtual int lireLargeur() const;
+	virtual int lireX() const;
+	virtual int lireY() const;
+	//virtual void lireRectangle(int *l, int *h, int *x, int *y);
+
 };
 
 #endif
