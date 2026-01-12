@@ -36,6 +36,7 @@ void Rectangle::afficher(ostream& s)
 	s << "Rectangle(x=" << ancrage.x << ",y="<< ancrage.y << ",l=" << longeur << ",h=" << largeur << ",aire=" << aire <<  ")" << endl;
 }
 
+//Faire une methode pour modifier
 void Rectangle::modifierLongueur(int l){
 	longueur = l;
 }
