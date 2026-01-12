@@ -33,3 +33,28 @@ void Carre::afficher(ostream& s)
 {
 	s << "Carre(x=" << ancrage.x << ",y="<< ancrage.y << ",c=" << cote << ",aire=" << aire << ")"  << endl;
 }
+
+//Faire une methode pour modifier
+void Carre::modifierCote(int c){
+	cote = c;
+}
+
+void Carre::modifierX(int x){
+	ancrage.x = x;
+}
+void Rectangle::modifierY(int y){
+	ancrage.y = y;
+}
+
+//Faire une methode pour lire
+int Carre::lireCote() const{
+	return cote;
+}
+
+int Carre::lireX() const{
+	return ancrage.x;
+}
+
+int Carre::lireY() const{
+	return ancrage.Y;
+}

@@ -13,7 +13,7 @@
 
 Rectangle::Rectangle(int l, int h, int x, int y)
 {
-    longeur = l;
+    longueur = l;
     largeur = h;
 
 	ancrage.x = x;
@@ -27,11 +27,44 @@ Rectangle::~Rectangle()
 
 double Rectangle::aire()
 {
-	aire = longeur*largeur;
+	aire = longueur*largeur;
 	return aire;
 }
 
 void Rectangle::afficher(ostream& s)
 {
 	s << "Rectangle(x=" << ancrage.x << ",y="<< ancrage.y << ",l=" << longeur << ",h=" << largeur << ",aire=" << aire <<  ")" << endl;
+}
+
+//Faire une methode pour modifier
+void Rectangle::modifierLongueur(int l){
+	longueur = l;
+}
+
+void Rectangle::modifierLargeur(int h){
+	largeur = h;
+}
+
+void Rectangle::modifierX(int x){
+	ancrage.x = x;
+}
+void Rectangle::modifierY(int y){
+	ancrage.y = y;
+}
+
+//Faire une methode pour lire
+int Rectangle::lireLongueur() const{
+	return longueur;
+}
+
+int Rectangle::lireLargeur() const{
+	return largeur;
+}
+
+int Rectangle::lireX() const{
+	return ancrage.x;
+}
+
+int Rectangle::lireY() const{
+	return ancrage.Y;
 }
