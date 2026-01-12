@@ -46,9 +46,8 @@ bool Couche::translater(int x, int y)
         coor.x += x;
         coor.y += y;
         vecteurDeForme.obtenir(i)->setAncrage(coor);
-        return true;
     }
-    return false;
+    return true;
 }
 
 void Couche::changeEtat(int nouvelleEtat)
@@ -78,6 +77,7 @@ void Couche::afficher(ostream &s)
         vecteurDeForme.obtenir(cpt)->afficher(s);
         cpt += 1;
     }
+    s << "Aire totale de la couche : " << aireTotale << endl;
     
 }
 

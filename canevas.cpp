@@ -60,7 +60,7 @@ bool Canevas::activerCouche(int index)
 			couches[i].changeEtat(INACTIF);
 		
 
-	if (0 <= index && index < MAX_COUCHES)
+	if (0 <= index && index < MAX_COUCHES && couches[index].retourneEtat() != ACTIF)
 	{
 		couches[index].changeEtat(ACTIF);
 		return true;
@@ -115,13 +115,14 @@ double Canevas::aire()
 
 bool Canevas::translater(int deltaX, int deltaY)
 {	
+	bool atleastOneTranslated = false;
 	for (int i = 0; i < MAX_COUCHES; i++)
 		if (couches[i].retourneEtat() == ACTIF)
 		{
 			couches[i].translater(deltaX,deltaY);
-			return true;
+			atleastOneTranslated = true;
 		}
-	return false;
+	return atleastOneTranslated;
 }
 
 void Canevas::afficher(ostream & s)
@@ -129,8 +130,9 @@ void Canevas::afficher(ostream & s)
 	for (int i = 0; i < MAX_COUCHES; i++)
 	{
 		s << "---- Couche " << i << " ----" << endl;
-		couches[i].afficher(s);
+		couches[i].afficher(s);	
 	}
+	s << endl;
 	
 	
 }

@@ -16,10 +16,21 @@ class Cercle: public Forme{
 public:
 	Cercle(int r, int x, int y);
 	virtual ~Cercle();
-	int rayon = 0;
-	float aireCercle = 0;
+
 	virtual double aire();
 	void afficher(ostream & s);
+
+	virtual void modifierRayon(int c);
+	virtual void modifierX(int x);
+	virtual void modifierY(int y);
+	
+	virtual int lireRayon() const;
+	virtual int lireX() const;
+	virtual int lireY() const;
+
+private:
+	int rayon = 0;
+	float aireCercle = 0;
 };
 
 #endif
