@@ -11,7 +11,7 @@
 
 #include "Rectangle.h"
 
-Rectangle::Rectangle(int l, int h, int x, int y)
+Rectangle::Rectangle(int x, int y, int l, int h)
 {
     longueur = l;
     largeur = h;
@@ -27,13 +27,13 @@ Rectangle::~Rectangle()
 
 double Rectangle::aire()
 {
-	aire = longueur*largeur;
-	return aire;
+	aireRectangle = longueur*largeur;
+	return aireRectangle;
 }
 
 void Rectangle::afficher(ostream& s)
 {
-	s << "Rectangle(x=" << ancrage.x << ",y="<< ancrage.y << ",l=" << longeur << ",h=" << largeur << ",aire=" << aire <<  ")" << endl;
+	s << "Rectangle(x=" << ancrage.x << ",y="<< ancrage.y << ",l=" << longueur << ",h=" << largeur << ",aire=" << aireRectangle <<  ")" << endl;
 }
 
 //Faire une methode pour modifier
@@ -66,5 +66,5 @@ int Rectangle::lireX() const{
 }
 
 int Rectangle::lireY() const{
-	return ancrage.Y;
+	return ancrage.y;
 }

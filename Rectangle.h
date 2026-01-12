@@ -20,7 +20,7 @@ public:
     int longueur = 0;
     int largeur = 0;
 
-	float aire = 0;
+	float aireRectangle = 0;
 	virtual double aire();
 	virtual void afficher(ostream & s);
 

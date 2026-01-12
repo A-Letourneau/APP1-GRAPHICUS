@@ -11,7 +11,7 @@
 
 #include "Carre.h"
 
-Carre::Carre(int c, int x, int y)
+Carre::Carre(int x, int y, int c)
 {
     cote = c;
 	ancrage.x = x;
@@ -25,13 +25,13 @@ Carre::~Carre()
 
 double Carre::aire()
 {
-	aire = cote*cote;
-	return aire;
+	aireCarre = cote*cote;
+	return aireCarre;
 }
 
 void Carre::afficher(ostream& s)
 {
-	s << "Carre(x=" << ancrage.x << ",y="<< ancrage.y << ",c=" << cote << ",aire=" << aire << ")"  << endl;
+	s << "Carre(x=" << ancrage.x << ",y="<< ancrage.y << ",c=" << cote << ",aire=" << aireCarre << ")"  << endl;
 }
 
 //Faire une methode pour modifier
@@ -42,7 +42,7 @@ void Carre::modifierCote(int c){
 void Carre::modifierX(int x){
 	ancrage.x = x;
 }
-void Rectangle::modifierY(int y){
+void Carre::modifierY(int y){
 	ancrage.y = y;
 }
 
@@ -56,5 +56,5 @@ int Carre::lireX() const{
 }
 
 int Carre::lireY() const{
-	return ancrage.Y;
+	return ancrage.y;
 }

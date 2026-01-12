@@ -19,7 +19,7 @@ public:
 	
     int cote = 0;
 
-	float aire = 0;
+	float aireCarre = 0;
 	virtual double aire();
 	virtual void afficher(ostream & s);
 

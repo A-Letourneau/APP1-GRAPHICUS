@@ -1,4 +1,6 @@
 #include "Cercle.h"
+#include "Carre.h"
+#include "Rectangle.h"
 #include "vecteur.h"
 #include "canevas.h"
 
@@ -14,16 +16,16 @@ int main()
     Cercle* c1 = new Cercle(0,0,5);
     cout << endl << tableauDeCouche.ajouterFormeCouche(c1) << endl;
     //— un carré (x=4, y=1, côté=6)
-    Cercle* car1 = new Cercle(4,1,6);
+    Carre* car1 = new Carre(4,1,6);
     cout << endl << tableauDeCouche.ajouterFormeCouche(car1) << endl;
     //— un rectangle (x=2, y=8, largeur=3, hauteur=9)
-    Cercle* r1 = new Cercle(2,8,3);
+    Rectangle* r1 = new Rectangle(2,8,3,9);
     cout << endl << tableauDeCouche.ajouterFormeCouche(r1) << endl;   
     //2. Activer la couche 1 et ajouter la forme suivante :
     tableauDeCouche.activerCouche(1);
     //— un rectangle (x=0, y=0, largeur=4, hauteur=2)
-    Cercle* r2 = new Cercle(0,0,4);
-    cout << endl << tableauDeCouche.ajouterFormeCouche(r1) << endl;  
+    Rectangle* r2 = new Rectangle(0,0,4,2);
+    cout << endl << tableauDeCouche.ajouterFormeCouche(r2) << endl;  
     //3. Afficher le canevas.
     tableauDeCouche.afficher(cout);
     //4. Afficher l’aire du canevas.
