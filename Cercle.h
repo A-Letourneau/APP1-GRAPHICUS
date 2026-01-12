@@ -20,7 +20,16 @@ public:
 	float aireCercle = 0;
 	virtual double aire();
 	virtual void afficher(ostream & s);
+
+	virtual void modifierRayon(int r);
+	virtual void modifierX(int x);
+	virtual void modifierY(int y);
+	
+	virtual int lireRayon() const;
+	virtual int lireX() const;
+	virtual int lireY() const;
 };
+
 
 #endif
 

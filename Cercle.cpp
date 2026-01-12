@@ -31,10 +31,31 @@ double Cercle::aire()
 
 void Cercle::afficher(ostream& s)
 {
-	s << "Cercle(x=" << ancrage.x << ",y="<< ancrage.y << ",r=" << rayon << ")" << endl;
+	s << "Cercle(x=" << ancrage.x << ",y="<< ancrage.y << ",r=" << rayon << ",aire=" << aire <<  ")" << endl;
 }
 
-int Cercle::returnRayon()
-{
-	rayon = nouvelle;
+
+//Faire une methode pour modifier
+void Cercle::modifierRayon(int r){
+	rayon = r;
+}
+
+void Cercle::modifierX(int x){
+	ancrage.x = x;
+}
+void Cercle::modifierY(int y){
+	ancrage.y = y;
+}
+
+//Faire une methode pour lire
+int Cercle::lireRayon() const{
+	return rayon;
+}
+
+int Cercle::lireX() const{
+	return ancrage.x;
+}
+
+int Cercle::lireY() const{
+	return ancrage.Y;
 }
