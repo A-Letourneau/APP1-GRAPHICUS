@@ -1,11 +1,10 @@
 /********
  * Fichier: canevas.h
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
  * Description: Déclaration de la classe Canevas. La classe gère un
  *    tableau de couches en accord avec les spécifications de Graphicus.
  *
- * Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
 #ifndef CANEVAS_H
@@ -14,8 +13,6 @@
 #include <iostream>
 #include "forme.h"
 #include "couche.h"
-
-
 
 const int MAX_COUCHES = 5;
 

@@ -1,7 +1,7 @@
 /********
  * Fichier: couche.h
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
  * Description: Déclaration de la classe pour une couche dans un
  *    canevas. La classe Couche gère un vecteur de pointeurs de formes
  *    géométriques en accord avec les spécifications de Graphicus.
@@ -31,7 +31,9 @@ class Couche
 		bool enleverForme(int index);
 		
 		void changeEtat(int nouvelleEtat);
+		void changeIndex(int index);
 		int  retourneEtat();
+		double retourneAireTotale();
 		void afficher(ostream & s);
 
 		bool translater(int x, int y);
@@ -40,6 +42,7 @@ class Couche
 
 		vecteur vecteurDeForme;
 
+	private:
 		int indexCouche;
 		int etat = INITIALISE;
 		double aireTotale = 0;

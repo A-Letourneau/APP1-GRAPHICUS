@@ -1,11 +1,8 @@
 /********
  * Fichier: couche.cpp
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
- * Description: Implémentation des méthodes des classes décrites dans
- *    couche.h.
- *
- * Ce fichier fait partie de la distribution de Graphicus.
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
+ * Description: Implémentation d'une couche pour contenir et gérer des pointeurs de formes.
 ********/
 
 #include "couche.h"
@@ -56,9 +53,20 @@ void Couche::changeEtat(int nouvelleEtat)
         etat = nouvelleEtat;
 }
 
+void Couche::changeIndex(int index)
+{
+    if (0 <= etat)
+        indexCouche = index;
+}
+
 int Couche::retourneEtat()
 {
     return etat;
+}
+
+double Couche::retourneAireTotale()
+{
+    return aireTotale;
 }
 
 void Couche::afficher(ostream &s)
@@ -89,4 +97,3 @@ void Couche::reinitialiser()
 }
 
 
-// Implémentation à faire...

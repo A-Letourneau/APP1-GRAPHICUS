@@ -1,10 +1,8 @@
 /********
  * Fichier: graphicus-01.cpp
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
- * Description: gestionnaire de tests pour l'application Graphicus.
- *
- * Ce fichier fait partie de la distribution de Graphicus.
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
+ * Description: Appelle les tests pour le bon fonctionnement de Graphicus-01.
 ********/
 #include "tests.h"
 
@@ -12,9 +10,10 @@ using namespace std;
 
 int main()
 {
-	Tests tests;
+    Tests test;
 
-	tests.tests_application();
+    test.tests_unitaires();
+
 	return 0;
 }
 

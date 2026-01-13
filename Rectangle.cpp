@@ -1,20 +1,16 @@
 /********
  * Fichier: Rectangle.cpp
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
- * Description: Implémentation des méthodes des classes décrites dans
- *    forme.h. Les méthodes de la classe Forme ne doivent pas être
- *    modifiées.
- *
- * Ce fichier fait partie de la distribution de Graphicus.
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
+ * Description: Déclaration d'objet Rectangle et sa gestion.
 ********/
 
 #include "Rectangle.h"
 
 Rectangle::Rectangle(int x, int y, int l, int h)
 {
-    longueur = l;
-    largeur = h;
+    longueur = abs(l);
+    largeur = abs(h);
 
 	ancrage.x = x;
 	ancrage.y = y;
@@ -39,10 +35,12 @@ void Rectangle::afficher(ostream& s)
 //Faire une methode pour modifier
 void Rectangle::modifierLongueur(int l){
 	longueur = l;
+	aire();
 }
 
 void Rectangle::modifierLargeur(int h){
 	largeur = h;
+	aire();
 }
 
 void Rectangle::modifierX(int x){

@@ -1,3 +1,9 @@
+/********
+ * Fichier: vecteur.h
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
+ * Description: Fonction qui gére un tableau de pointeur de forme dynamiquement.  
+********/
 #ifndef VECTEUR_H
 #define VECTEUR_H
 

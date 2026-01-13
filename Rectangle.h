@@ -1,11 +1,8 @@
 /********
- * Fichier: forme.h
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
- * Description: Déclaration des classes de formes géométriques. La
- *    classe Forme ne doit pas être modifiée.
- *
- * Ce fichier fait partie de la distribution de Graphicus.
+ * Fichier: Rectangle.h
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
+ * Description: Déclaration d'objet Rectangle et sa gestion.
 ********/
 #ifndef RECTANGLE_H
 #define RECTANGLE_H

@@ -1,19 +1,17 @@
 /********
  * Fichier: Carre.cpp
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
  * Description: Implémentation des méthodes des classes décrites dans
- *    forme.h. Les méthodes de la classe Forme ne doivent pas être
- *    modifiées.
+ *    Carre.h. 
  *
- * Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
 #include "Carre.h"
 
 Carre::Carre(int x, int y, int c)
 {
-    cote = c;
+    cote = abs(c);
 	ancrage.x = x;
 	ancrage.y = y;
 	aire();
@@ -37,6 +35,7 @@ void Carre::afficher(ostream& s)
 //Faire une methode pour modifier
 void Carre::modifierCote(int c){
 	cote = c;
+	aire();
 }
 
 void Carre::modifierX(int x){

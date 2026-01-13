@@ -1,3 +1,12 @@
+/********
+ * Fichier: vecteur.cpp
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
+ * Description: Implémentation des méthodes des classes décrites dans
+ *    tests.h.  Ce fichier peut être adapté à vos besoins de tests.
+ *
+
+********/
 #include "vecteur.h"
 
 // Constructeur
@@ -56,7 +65,7 @@ void vecteur::ajouter(Forme* forme)
 Forme* vecteur::enlever(int index)
 {
     
-    if(0 < index && index < m_taille && m_donnees[index] != nullptr)
+    if(0 <= index && index < m_taille && m_donnees[index] != nullptr)
     {
         Forme* sauvegardeForme = m_donnees[index];
         m_donnees[index] = nullptr;

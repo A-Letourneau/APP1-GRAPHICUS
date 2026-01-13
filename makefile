@@ -1,7 +1,7 @@
-main: main.o tests.o canevas.o couche.o vecteur.o forme.o Rectangle.o Carre.o Cercle.o
-	g++ -o main main.o tests.o canevas.o couche.o vecteur.o forme.o Rectangle.o Carre.o Cercle.o
-main.o: main.cpp tests.h canevas.h couche.h vecteur.h forme.h
-	g++ main.cpp -g -c
+graphicus-01: graphicus-01.o tests.o canevas.o couche.o vecteur.o forme.o Rectangle.o Carre.o Cercle.o
+	g++ -o graphicus-01 graphicus-01.o tests.o canevas.o couche.o vecteur.o forme.o Rectangle.o Carre.o Cercle.o
+graphicus-01.o: graphicus-01.cpp tests.h canevas.h couche.h vecteur.h forme.h
+	g++ graphicus-01.cpp -g -c
 test.o: tests.cpp tests.h canevas.h couche.h vecteur.h forme.h
 	g++ tests.cpp -g -c
 caneva.o: canevas.cpp canevas.h couche.h vecteur.h forme.h

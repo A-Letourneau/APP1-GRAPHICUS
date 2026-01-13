@@ -1,11 +1,8 @@
 /********
  * Fichier: tests.h
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
  * Description: Déclaration de la classe pour les tests de Graphicus.
- *    Ce fichier peut être adapté à vos besoins de tests.
- *
- * Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
 #ifndef TESTS_H
@@ -28,11 +25,6 @@ public:
 	void tests_unitaires_couche();
 	void tests_unitaires_canevas();
 	void tests_unitaires(); // Appel de tous les tests unitaires
-	// Méthodes pour les tests unitaires applicatifs
-	void tests_application_cas_01();
-	void tests_application_cas_02();
-	void tests_application(); // Appel de tous les tests applicatifs
-    void tests_validation();
 };
 
 #endif

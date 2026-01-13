@@ -1,11 +1,10 @@
 /********
  * Fichier: canevas.cpp
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
+ * Auteurs: Noémie Boisjoly et Alexis Létourneau
+ * Date: 13 janvier 2026
  * Description: Implémentation des méthodes des classes décrites dans
  *    canevas.h.
  *
- * Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
 #include "canevas.h"
@@ -14,7 +13,7 @@ Canevas::Canevas()
 {
 	for (int i = 0; i < MAX_COUCHES; i++)
 	{
-		couches[i].indexCouche = i;
+		couches[i].changeIndex(i);
 		couches[i].changeEtat(INITIALISE);
 	}
 }
@@ -107,7 +106,7 @@ double Canevas::aire()
 
 	for (int i = 0; i < MAX_COUCHES; i++)
 	{
-		aireCaneva += couches[i].aireTotale;
+		aireCaneva += couches[i].retourneAireTotale();
 	}
 	
 	return aireCaneva;
